@@ -7,8 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		301638792CB19814006A6A2E /* TinyHLSApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 301638782CB19814006A6A2E /* TinyHLSApp.swift */; };
-		3016387B2CB19814006A6A2E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3016387A2CB19814006A6A2E /* ContentView.swift */; };
+		301638792CB19814006A6A2E /* Application.swift in Sources */ = {isa = PBXBuildFile; fileRef = 301638782CB19814006A6A2E /* Application.swift */; };
 		3016387D2CB19816006A6A2E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3016387C2CB19816006A6A2E /* Assets.xcassets */; };
 		301638812CB19816006A6A2E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 301638802CB19816006A6A2E /* Preview Assets.xcassets */; };
 		3016388B2CB19816006A6A2E /* TinyHLSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3016388A2CB19816006A6A2E /* TinyHLSTests.swift */; };
@@ -35,8 +34,7 @@
 
 /* Begin PBXFileReference section */
 		301638752CB19814006A6A2E /* TinyHLS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TinyHLS.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		301638782CB19814006A6A2E /* TinyHLSApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TinyHLSApp.swift; sourceTree = "<group>"; };
-		3016387A2CB19814006A6A2E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		301638782CB19814006A6A2E /* Application.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Application.swift; sourceTree = "<group>"; };
 		3016387C2CB19816006A6A2E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3016387E2CB19816006A6A2E /* TinyHLS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TinyHLS.entitlements; sourceTree = "<group>"; };
 		301638802CB19816006A6A2E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -75,10 +73,10 @@
 		3016386C2CB19814006A6A2E = {
 			isa = PBXGroup;
 			children = (
+				301638762CB19814006A6A2E /* Products */,
 				301638772CB19814006A6A2E /* TinyHLS */,
 				301638892CB19816006A6A2E /* TinyHLSTests */,
 				301638932CB19816006A6A2E /* TinyHLSUITests */,
-				301638762CB19814006A6A2E /* Products */,
 			);
 			sourceTree = "<group>";
 		};
@@ -95,11 +93,8 @@
 		301638772CB19814006A6A2E /* TinyHLS */ = {
 			isa = PBXGroup;
 			children = (
-				301638782CB19814006A6A2E /* TinyHLSApp.swift */,
-				3016387A2CB19814006A6A2E /* ContentView.swift */,
-				3016387C2CB19816006A6A2E /* Assets.xcassets */,
-				3016387E2CB19816006A6A2E /* TinyHLS.entitlements */,
-				3016387F2CB19816006A6A2E /* Preview Content */,
+				301638A42CB19858006A6A2E /* Resources */,
+				301638A32CB19854006A6A2E /* Source */,
 			);
 			path = TinyHLS;
 			sourceTree = "<group>";
@@ -127,6 +122,56 @@
 				301638962CB19816006A6A2E /* TinyHLSUITestsLaunchTests.swift */,
 			);
 			path = TinyHLSUITests;
+			sourceTree = "<group>";
+		};
+		301638A32CB19854006A6A2E /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				301638A72CB1994A006A6A2E /* Bitrate */,
+				301638A62CB19941006A6A2E /* Buffer */,
+				301638A52CB19937006A6A2E /* Networking */,
+				301638A82CB199A8006A6A2E /* UI */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
+		301638A42CB19858006A6A2E /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				3016387F2CB19816006A6A2E /* Preview Content */,
+				3016387C2CB19816006A6A2E /* Assets.xcassets */,
+				3016387E2CB19816006A6A2E /* TinyHLS.entitlements */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		301638A52CB19937006A6A2E /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		301638A62CB19941006A6A2E /* Buffer */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Buffer;
+			sourceTree = "<group>";
+		};
+		301638A72CB1994A006A6A2E /* Bitrate */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Bitrate;
+			sourceTree = "<group>";
+		};
+		301638A82CB199A8006A6A2E /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				301638782CB19814006A6A2E /* Application.swift */,
+			);
+			path = UI;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -233,8 +278,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				301638812CB19816006A6A2E /* Preview Assets.xcassets in Resources */,
 				3016387D2CB19816006A6A2E /* Assets.xcassets in Resources */,
+				301638812CB19816006A6A2E /* Preview Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -259,8 +304,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3016387B2CB19814006A6A2E /* ContentView.swift in Sources */,
-				301638792CB19814006A6A2E /* TinyHLSApp.swift in Sources */,
+				301638792CB19814006A6A2E /* Application.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -276,8 +320,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				301638972CB19816006A6A2E /* TinyHLSUITestsLaunchTests.swift in Sources */,
 				301638952CB19816006A6A2E /* TinyHLSUITests.swift in Sources */,
+				301638972CB19816006A6A2E /* TinyHLSUITestsLaunchTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -416,10 +460,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = TinyHLS/TinyHLS.entitlements;
+				CODE_SIGN_ENTITLEMENTS = TinyHLS/Resources/TinyHLS.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"TinyHLS/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"TinyHLS/Resources/Preview Content\"";
 				DEVELOPMENT_TEAM = FH85Z67KT3;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
@@ -454,10 +498,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = TinyHLS/TinyHLS.entitlements;
+				CODE_SIGN_ENTITLEMENTS = TinyHLS/Resources/TinyHLS.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"TinyHLS/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"TinyHLS/Resources/Preview Content\"";
 				DEVELOPMENT_TEAM = FH85Z67KT3;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
