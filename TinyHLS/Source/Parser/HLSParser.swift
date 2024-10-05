@@ -1,5 +1,6 @@
 import Foundation
 
+/// Constants representing HLS tags used in the playlist.
 private struct HLSConstants {
     static let extM3U = "#EXTM3U"
     static let extXVersion = "#EXT-X-VERSION"
@@ -8,6 +9,7 @@ private struct HLSConstants {
     static let extXEndList = "#EXT-X-ENDLIST"
 }
 
+/// Enumeration of possible errors that can occur while parsing HLS playlists.
 public enum HLSParserError: Error {
     case invalidFormat
     case missingVersion
@@ -16,11 +18,13 @@ public enum HLSParserError: Error {
     case missingTargetDuration
 }
 
+/// Represents an HLS master playlist.
 public struct HLSMasterPlaylist {
     let version: Int
     let variants: [HLSVariantStream]
 }
 
+/// Represents a variant stream in an HLS master playlist.
 public struct HLSVariantStream {
     let bandwidth: Int
     let codecs: String
@@ -30,18 +34,25 @@ public struct HLSVariantStream {
     let uri: String
 }
 
+/// Represents an HLS media playlist.
 public struct HLSMediaPlaylist {
     let version: Int
     let targetDuration: Int
     let segments: [HLSSegment]
 }
 
+/// Represents a segment in an HLS media playlist.
 public struct HLSSegment {
     let duration: Double
     let uri: String
 }
 
+/// Class responsible for parsing HLS playlists.
 class HLSParser {
+    /// Parses an HLS master playlist from the given data.
+    /// - Parameter data: The data representing the HLS master playlist.
+    /// - Throws: `HLSParserError` if parsing fails.
+    /// - Returns: An `HLSMasterPlaylist` object representing the parsed playlist.
     func parseMasterPlaylist(data: Data) throws -> HLSMasterPlaylist {
         guard let content = String(data: data, encoding: .utf8) else {
             throw HLSParserError.invalidFormat
@@ -73,6 +84,10 @@ class HLSParser {
         return HLSMasterPlaylist(version: playlistVersion, variants: variants)
     }
 
+    /// Parses an HLS media playlist from the given data.
+    /// - Parameter data: The data representing the HLS media playlist.
+    /// - Throws: `HLSParserError` if parsing fails.
+    /// - Returns: An `HLSMediaPlaylist` object representing the parsed playlist.
     func parseMediaPlaylist(data: Data) throws -> HLSMediaPlaylist {
         guard let content = String(data: data, encoding: .utf8) else {
             throw HLSParserError.invalidFormat
@@ -91,8 +106,7 @@ class HLSParser {
                 let durationString = line.replacingOccurrences(of: "#EXT-X-TARGETDURATION:", with: "")
                 if let duration = Int(durationString) { targetDuration = duration }
             } else if line.hasPrefix(HLSConstants.extInf) {
-                let durationString = line.replacingOccurrences(of: "\(HLSConstants.extInf):", with: "")
-                    .components(separatedBy: ",")[0]
+                let durationString = line.replacingOccurrences(of: "\(HLSConstants.extInf):", with: "").components(separatedBy: ",")[0]
                 guard let duration = Double(durationString) else {
                     throw HLSParserError.invalidFormat
                 }
@@ -114,6 +128,10 @@ class HLSParser {
         return HLSMediaPlaylist(version: playlistVersion, targetDuration: playlistTargetDuration, segments: segments)
     }
 
+    /// Parses a string of attributes into a dictionary.
+    /// - Parameter string: The string containing key-value pairs of attributes.
+    /// - Throws: `HLSParserError` if parsing fails.
+    /// - Returns: A dictionary of attribute key-value pairs.
     private func parseAttributes(_ string: String) throws -> [String: String] {
         var attributes = [String: String]()
         var isInsideQuotes = false
@@ -152,6 +170,12 @@ class HLSParser {
         return attributes
     }
 
+    /// Creates a `HLSVariantStream` object from parsed attributes and URI.
+    /// - Parameters:
+    ///   - attributes: A dictionary of attributes for the variant stream.
+    ///   - uri: The URI of the variant stream.
+    /// - Throws: `HLSParserError` if required attributes are missing.
+    /// - Returns: An `HLSVariantStream` object representing the parsed variant stream.
     private func createVariantStream(from attributes: [String: String], uri: String) throws -> HLSVariantStream {
         guard let bandwidthString = attributes["BANDWIDTH"], let bandwidth = Int(bandwidthString),
               let codecs = attributes["CODECS"]
@@ -181,6 +205,7 @@ class HLSParser {
     }
 }
 
+/// Extension to safely access elements in a collection.
 extension Collection {
     subscript(safe index: Index) -> Element? {
         indices.contains(index) ? self[index] : nil
