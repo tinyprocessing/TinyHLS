@@ -1,0 +1,622 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		301638792CB19814006A6A2E /* TinyHLSApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 301638782CB19814006A6A2E /* TinyHLSApp.swift */; };
+		3016387B2CB19814006A6A2E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3016387A2CB19814006A6A2E /* ContentView.swift */; };
+		3016387D2CB19816006A6A2E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3016387C2CB19816006A6A2E /* Assets.xcassets */; };
+		301638812CB19816006A6A2E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 301638802CB19816006A6A2E /* Preview Assets.xcassets */; };
+		3016388B2CB19816006A6A2E /* TinyHLSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3016388A2CB19816006A6A2E /* TinyHLSTests.swift */; };
+		301638952CB19816006A6A2E /* TinyHLSUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 301638942CB19816006A6A2E /* TinyHLSUITests.swift */; };
+		301638972CB19816006A6A2E /* TinyHLSUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 301638962CB19816006A6A2E /* TinyHLSUITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		301638872CB19816006A6A2E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3016386D2CB19814006A6A2E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 301638742CB19814006A6A2E;
+			remoteInfo = TinyHLS;
+		};
+		301638912CB19816006A6A2E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3016386D2CB19814006A6A2E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 301638742CB19814006A6A2E;
+			remoteInfo = TinyHLS;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		301638752CB19814006A6A2E /* TinyHLS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TinyHLS.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		301638782CB19814006A6A2E /* TinyHLSApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TinyHLSApp.swift; sourceTree = "<group>"; };
+		3016387A2CB19814006A6A2E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		3016387C2CB19816006A6A2E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		3016387E2CB19816006A6A2E /* TinyHLS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TinyHLS.entitlements; sourceTree = "<group>"; };
+		301638802CB19816006A6A2E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		301638862CB19816006A6A2E /* TinyHLSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TinyHLSTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3016388A2CB19816006A6A2E /* TinyHLSTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TinyHLSTests.swift; sourceTree = "<group>"; };
+		301638902CB19816006A6A2E /* TinyHLSUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TinyHLSUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		301638942CB19816006A6A2E /* TinyHLSUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TinyHLSUITests.swift; sourceTree = "<group>"; };
+		301638962CB19816006A6A2E /* TinyHLSUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TinyHLSUITestsLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		301638722CB19814006A6A2E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		301638832CB19816006A6A2E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3016388D2CB19816006A6A2E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3016386C2CB19814006A6A2E = {
+			isa = PBXGroup;
+			children = (
+				301638772CB19814006A6A2E /* TinyHLS */,
+				301638892CB19816006A6A2E /* TinyHLSTests */,
+				301638932CB19816006A6A2E /* TinyHLSUITests */,
+				301638762CB19814006A6A2E /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		301638762CB19814006A6A2E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				301638752CB19814006A6A2E /* TinyHLS.app */,
+				301638862CB19816006A6A2E /* TinyHLSTests.xctest */,
+				301638902CB19816006A6A2E /* TinyHLSUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		301638772CB19814006A6A2E /* TinyHLS */ = {
+			isa = PBXGroup;
+			children = (
+				301638782CB19814006A6A2E /* TinyHLSApp.swift */,
+				3016387A2CB19814006A6A2E /* ContentView.swift */,
+				3016387C2CB19816006A6A2E /* Assets.xcassets */,
+				3016387E2CB19816006A6A2E /* TinyHLS.entitlements */,
+				3016387F2CB19816006A6A2E /* Preview Content */,
+			);
+			path = TinyHLS;
+			sourceTree = "<group>";
+		};
+		3016387F2CB19816006A6A2E /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				301638802CB19816006A6A2E /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		301638892CB19816006A6A2E /* TinyHLSTests */ = {
+			isa = PBXGroup;
+			children = (
+				3016388A2CB19816006A6A2E /* TinyHLSTests.swift */,
+			);
+			path = TinyHLSTests;
+			sourceTree = "<group>";
+		};
+		301638932CB19816006A6A2E /* TinyHLSUITests */ = {
+			isa = PBXGroup;
+			children = (
+				301638942CB19816006A6A2E /* TinyHLSUITests.swift */,
+				301638962CB19816006A6A2E /* TinyHLSUITestsLaunchTests.swift */,
+			);
+			path = TinyHLSUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		301638742CB19814006A6A2E /* TinyHLS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3016389A2CB19816006A6A2E /* Build configuration list for PBXNativeTarget "TinyHLS" */;
+			buildPhases = (
+				301638712CB19814006A6A2E /* Sources */,
+				301638722CB19814006A6A2E /* Frameworks */,
+				301638732CB19814006A6A2E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TinyHLS;
+			productName = TinyHLS;
+			productReference = 301638752CB19814006A6A2E /* TinyHLS.app */;
+			productType = "com.apple.product-type.application";
+		};
+		301638852CB19816006A6A2E /* TinyHLSTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3016389D2CB19816006A6A2E /* Build configuration list for PBXNativeTarget "TinyHLSTests" */;
+			buildPhases = (
+				301638822CB19816006A6A2E /* Sources */,
+				301638832CB19816006A6A2E /* Frameworks */,
+				301638842CB19816006A6A2E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				301638882CB19816006A6A2E /* PBXTargetDependency */,
+			);
+			name = TinyHLSTests;
+			productName = TinyHLSTests;
+			productReference = 301638862CB19816006A6A2E /* TinyHLSTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		3016388F2CB19816006A6A2E /* TinyHLSUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 301638A02CB19816006A6A2E /* Build configuration list for PBXNativeTarget "TinyHLSUITests" */;
+			buildPhases = (
+				3016388C2CB19816006A6A2E /* Sources */,
+				3016388D2CB19816006A6A2E /* Frameworks */,
+				3016388E2CB19816006A6A2E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				301638922CB19816006A6A2E /* PBXTargetDependency */,
+			);
+			name = TinyHLSUITests;
+			productName = TinyHLSUITests;
+			productReference = 301638902CB19816006A6A2E /* TinyHLSUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3016386D2CB19814006A6A2E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1510;
+				LastUpgradeCheck = 1510;
+				TargetAttributes = {
+					301638742CB19814006A6A2E = {
+						CreatedOnToolsVersion = 15.1;
+					};
+					301638852CB19816006A6A2E = {
+						CreatedOnToolsVersion = 15.1;
+						TestTargetID = 301638742CB19814006A6A2E;
+					};
+					3016388F2CB19816006A6A2E = {
+						CreatedOnToolsVersion = 15.1;
+						TestTargetID = 301638742CB19814006A6A2E;
+					};
+				};
+			};
+			buildConfigurationList = 301638702CB19814006A6A2E /* Build configuration list for PBXProject "TinyHLS" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 3016386C2CB19814006A6A2E;
+			productRefGroup = 301638762CB19814006A6A2E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				301638742CB19814006A6A2E /* TinyHLS */,
+				301638852CB19816006A6A2E /* TinyHLSTests */,
+				3016388F2CB19816006A6A2E /* TinyHLSUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		301638732CB19814006A6A2E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				301638812CB19816006A6A2E /* Preview Assets.xcassets in Resources */,
+				3016387D2CB19816006A6A2E /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		301638842CB19816006A6A2E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3016388E2CB19816006A6A2E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		301638712CB19814006A6A2E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3016387B2CB19814006A6A2E /* ContentView.swift in Sources */,
+				301638792CB19814006A6A2E /* TinyHLSApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		301638822CB19816006A6A2E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3016388B2CB19816006A6A2E /* TinyHLSTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3016388C2CB19816006A6A2E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				301638972CB19816006A6A2E /* TinyHLSUITestsLaunchTests.swift in Sources */,
+				301638952CB19816006A6A2E /* TinyHLSUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		301638882CB19816006A6A2E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 301638742CB19814006A6A2E /* TinyHLS */;
+			targetProxy = 301638872CB19816006A6A2E /* PBXContainerItemProxy */;
+		};
+		301638922CB19816006A6A2E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 301638742CB19814006A6A2E /* TinyHLS */;
+			targetProxy = 301638912CB19816006A6A2E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		301638982CB19816006A6A2E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		301638992CB19816006A6A2E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+			};
+			name = Release;
+		};
+		3016389B2CB19816006A6A2E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = TinyHLS/TinyHLS.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"TinyHLS/Preview Content\"";
+				DEVELOPMENT_TEAM = FH85Z67KT3;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
+				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 14.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = tinyprocessing.com.TinyHLS;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		3016389C2CB19816006A6A2E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = TinyHLS/TinyHLS.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"TinyHLS/Preview Content\"";
+				DEVELOPMENT_TEAM = FH85Z67KT3;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
+				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 14.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = tinyprocessing.com.TinyHLS;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		3016389E2CB19816006A6A2E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = FH85Z67KT3;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				MACOSX_DEPLOYMENT_TARGET = 14.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = tinyprocessing.com.TinyHLSTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TinyHLS.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/TinyHLS";
+			};
+			name = Debug;
+		};
+		3016389F2CB19816006A6A2E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = FH85Z67KT3;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				MACOSX_DEPLOYMENT_TARGET = 14.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = tinyprocessing.com.TinyHLSTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TinyHLS.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/TinyHLS";
+			};
+			name = Release;
+		};
+		301638A12CB19816006A6A2E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = FH85Z67KT3;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				MACOSX_DEPLOYMENT_TARGET = 14.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = tinyprocessing.com.TinyHLSUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = TinyHLS;
+			};
+			name = Debug;
+		};
+		301638A22CB19816006A6A2E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = FH85Z67KT3;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				MACOSX_DEPLOYMENT_TARGET = 14.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = tinyprocessing.com.TinyHLSUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = TinyHLS;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		301638702CB19814006A6A2E /* Build configuration list for PBXProject "TinyHLS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				301638982CB19816006A6A2E /* Debug */,
+				301638992CB19816006A6A2E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3016389A2CB19816006A6A2E /* Build configuration list for PBXNativeTarget "TinyHLS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3016389B2CB19816006A6A2E /* Debug */,
+				3016389C2CB19816006A6A2E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3016389D2CB19816006A6A2E /* Build configuration list for PBXNativeTarget "TinyHLSTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3016389E2CB19816006A6A2E /* Debug */,
+				3016389F2CB19816006A6A2E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		301638A02CB19816006A6A2E /* Build configuration list for PBXNativeTarget "TinyHLSUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				301638A12CB19816006A6A2E /* Debug */,
+				301638A22CB19816006A6A2E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 3016386D2CB19814006A6A2E /* Project object */;
+}
