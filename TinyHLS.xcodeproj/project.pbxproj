@@ -13,6 +13,9 @@
 		3016388B2CB19816006A6A2E /* TinyHLSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3016388A2CB19816006A6A2E /* TinyHLSTests.swift */; };
 		301638952CB19816006A6A2E /* TinyHLSUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 301638942CB19816006A6A2E /* TinyHLSUITests.swift */; };
 		301638972CB19816006A6A2E /* TinyHLSUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 301638962CB19816006A6A2E /* TinyHLSUITestsLaunchTests.swift */; };
+		301638AA2CB19D22006A6A2E /* HLSNetworkHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 301638A92CB19D22006A6A2E /* HLSNetworkHandler.swift */; };
+		301638AD2CB19D9C006A6A2E /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 301638AC2CB19D9C006A6A2E /* Constants.swift */; };
+		301638B02CB1A108006A6A2E /* HLSParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 301638AF2CB1A108006A6A2E /* HLSParser.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +46,9 @@
 		301638902CB19816006A6A2E /* TinyHLSUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TinyHLSUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		301638942CB19816006A6A2E /* TinyHLSUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TinyHLSUITests.swift; sourceTree = "<group>"; };
 		301638962CB19816006A6A2E /* TinyHLSUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TinyHLSUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		301638A92CB19D22006A6A2E /* HLSNetworkHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HLSNetworkHandler.swift; sourceTree = "<group>"; };
+		301638AC2CB19D9C006A6A2E /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		301638AF2CB1A108006A6A2E /* HLSParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HLSParser.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,6 +133,8 @@
 		301638A32CB19854006A6A2E /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				301638AE2CB1A100006A6A2E /* Parser */,
+				301638AB2CB19D94006A6A2E /* Constants */,
 				301638A72CB1994A006A6A2E /* Bitrate */,
 				301638A62CB19941006A6A2E /* Buffer */,
 				301638A52CB19937006A6A2E /* Networking */,
@@ -148,6 +156,7 @@
 		301638A52CB19937006A6A2E /* Networking */ = {
 			isa = PBXGroup;
 			children = (
+				301638A92CB19D22006A6A2E /* HLSNetworkHandler.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -172,6 +181,22 @@
 				301638782CB19814006A6A2E /* Application.swift */,
 			);
 			path = UI;
+			sourceTree = "<group>";
+		};
+		301638AB2CB19D94006A6A2E /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				301638AC2CB19D9C006A6A2E /* Constants.swift */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
+		301638AE2CB1A100006A6A2E /* Parser */ = {
+			isa = PBXGroup;
+			children = (
+				301638AF2CB1A108006A6A2E /* HLSParser.swift */,
+			);
+			path = Parser;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -305,6 +330,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				301638792CB19814006A6A2E /* Application.swift in Sources */,
+				301638AA2CB19D22006A6A2E /* HLSNetworkHandler.swift in Sources */,
+				301638B02CB1A108006A6A2E /* HLSParser.swift in Sources */,
+				301638AD2CB19D9C006A6A2E /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
