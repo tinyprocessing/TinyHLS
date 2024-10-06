@@ -106,7 +106,8 @@ class HLSParser {
                 let durationString = line.replacingOccurrences(of: "#EXT-X-TARGETDURATION:", with: "")
                 if let duration = Int(durationString) { targetDuration = duration }
             } else if line.hasPrefix(HLSConstants.extInf) {
-                let durationString = line.replacingOccurrences(of: "\(HLSConstants.extInf):", with: "").components(separatedBy: ",")[0]
+                let durationString = line.replacingOccurrences(of: "\(HLSConstants.extInf):", with: "")
+                    .components(separatedBy: ",")[0]
                 guard let duration = Double(durationString) else {
                     throw HLSParserError.invalidFormat
                 }

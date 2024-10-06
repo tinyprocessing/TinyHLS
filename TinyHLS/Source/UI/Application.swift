@@ -4,10 +4,12 @@ import SwiftUI
 struct TinyHLSApp: App {
     let network: HLSNetworkHandler
     let parser: HLSParser
+    let buffer: HLSBufferManager
 
     init() {
         network = HLSNetworkHandler()
         parser = HLSParser()
+        buffer = HLSBufferManager(maxBufferSize: 16)
     }
 
     var body: some Scene {
@@ -22,32 +24,62 @@ struct TinyHLSApp: App {
 
     private func downloadAndProcessFile() async {
         do {
-            guard let url = URL(string: Constants.streamPath) else { return }
-            let masterPlaylistData = try await network.downloadM3U8File(url: url)
-            let parsedMasterPlaylist = try parser.parseMasterPlaylist(data: masterPlaylistData)
-
-            let selectedVariant = parsedMasterPlaylist.variants
-                .filter { $0.resolution != nil }
-                .first(where: { $0.bandwidth == Config.targetBandwidth })
-
-            guard let selectedVariant = selectedVariant else {
-                return
-            }
-
-            guard let variantURL = URL(string: Constants.domain + selectedVariant.uri) else { return }
+            let masterPlaylistData = try await downloadFile(urlString: Constants.streamPath)
+            let parsedMasterPlaylist = try parseMasterPlaylist(data: masterPlaylistData)
+            let selectedVariant = try selectVariant(from: parsedMasterPlaylist)
+            let variantURL = try createURL(from: Constants.domain + selectedVariant.uri)
             let playlistData = try await network.downloadM3U8File(url: variantURL)
             let parsedPlaylist = try parser.parseMediaPlaylist(data: playlistData)
-
-            print(parsedPlaylist.segments)
-        } catch let error as URLError {
-            handleError(.networkError(error))
-        } catch let error as HLSParserError {
-            handleError(.parserError(error))
+            let downloadedChunks = try await downloadChunks(from: parsedPlaylist.segments)
+            processChunks(downloadedChunks)
         } catch let error as PlayerError {
-            handleError(.playerError(error))
+            handleError(error)
         } catch {
             handleError(.unexpectedError(error))
         }
+    }
+
+    private func downloadFile(urlString: String) async throws -> Data {
+        guard let url = URL(string: urlString) else {
+            throw PlayerError.invalidURL
+        }
+        return try await network.downloadM3U8File(url: url)
+    }
+
+    private func parseMasterPlaylist(data: Data) throws -> HLSMasterPlaylist {
+        return try parser.parseMasterPlaylist(data: data)
+    }
+
+    private func selectVariant(from playlist: HLSMasterPlaylist) throws -> HLSVariantStream {
+        guard let selectedVariant = playlist.variants
+            .first(where: { $0.resolution != nil && $0.bandwidth == Config.targetBandwidth })
+        else {
+            throw PlayerError.noVariantFound
+        }
+        return selectedVariant
+    }
+
+    private func createURL(from urlString: String) throws -> URL {
+        guard let url = URL(string: urlString) else {
+            throw PlayerError.invalidURL
+        }
+        return url
+    }
+
+    private func downloadChunks(from segments: [HLSSegment]) async throws -> [Data] {
+        let chunkedSegments = Utils.chunkArray(segments, chunkSize: 3)
+        guard let firstGroup = chunkedSegments.first else {
+            throw PlayerError.noSegmentsFound
+        }
+        return try await network
+            .downloadTSFiles(urls: firstGroup.compactMap { try? createURL(from: Constants.domain + $0.uri) })
+    }
+
+    private func processChunks(_ chunks: [Data]) {
+        chunks.forEach { buffer.addSegment($0) }
+        print(buffer.isBufferReady())
+        print(buffer.getBufferStatus())
+        print(buffer.getCurrentSegment())
     }
 
     private func handleError(_ error: PlayerError) {
@@ -61,7 +93,11 @@ struct TinyHLSApp: App {
         case .unexpectedError(let error):
             print("Unexpected error: \(error)")
         case .noVariantFound:
-            print("No variant found \(error)")
+            print("No variant found")
+        case .invalidURL:
+            print("Invalid URL")
+        case .noSegmentsFound:
+            print("No segments found")
         }
     }
 
@@ -71,6 +107,8 @@ struct TinyHLSApp: App {
         case playerError(Error)
         case unexpectedError(Error)
         case noVariantFound
+        case invalidURL
+        case noSegmentsFound
     }
 
     private enum Config {
