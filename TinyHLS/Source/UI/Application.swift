@@ -4,10 +4,12 @@ import SwiftUI
 struct TinyHLSApp: App {
     let network: HLSNetworkHandler
     let parser: HLSParser
+    let buffer: HLSBufferManager
 
     init() {
         network = HLSNetworkHandler()
         parser = HLSParser()
+        buffer = HLSBufferManager(maxBufferSize: 16)
     }
 
     var body: some Scene {
@@ -37,8 +39,16 @@ struct TinyHLSApp: App {
             guard let variantURL = URL(string: Constants.domain + selectedVariant.uri) else { return }
             let playlistData = try await network.downloadM3U8File(url: variantURL)
             let parsedPlaylist = try parser.parseMediaPlaylist(data: playlistData)
-
-            print(parsedPlaylist.segments)
+            let chanks = Utils.chunkArray(parsedPlaylist.segments, chunkSize: 3)
+            guard let firstGroup = chanks.first else { return }
+            let downloadedChanks = try await network
+                .downloadTSFiles(urls: firstGroup.map { URL(string: Constants.domain + $0.uri)! })
+            downloadedChanks.forEach { data in
+                buffer.addSegment(data)
+            }
+            print(buffer.isBufferReady())
+            print(buffer.getBufferStatus())
+            print(buffer.getCurrentSegment())
         } catch let error as URLError {
             handleError(.networkError(error))
         } catch let error as HLSParserError {

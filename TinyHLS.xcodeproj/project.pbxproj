@@ -9,13 +9,15 @@
 /* Begin PBXBuildFile section */
 		301638792CB19814006A6A2E /* Application.swift in Sources */ = {isa = PBXBuildFile; fileRef = 301638782CB19814006A6A2E /* Application.swift */; };
 		3016387D2CB19816006A6A2E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3016387C2CB19816006A6A2E /* Assets.xcassets */; };
+		301638AD2CB19D9C006A6A2E /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 301638AC2CB19D9C006A6A2E /* Constants.swift */; };
+		30C1A06D2CB2EC8100C72BAF /* HLSBufferManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C1A06C2CB2EC8100C72BAF /* HLSBufferManager.swift */; };
+		301638AA2CB19D22006A6A2E /* HLSNetworkHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 301638A92CB19D22006A6A2E /* HLSNetworkHandler.swift */; };
+		301638B02CB1A108006A6A2E /* HLSParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 301638AF2CB1A108006A6A2E /* HLSParser.swift */; };
 		301638812CB19816006A6A2E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 301638802CB19816006A6A2E /* Preview Assets.xcassets */; };
 		3016388B2CB19816006A6A2E /* TinyHLSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3016388A2CB19816006A6A2E /* TinyHLSTests.swift */; };
 		301638952CB19816006A6A2E /* TinyHLSUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 301638942CB19816006A6A2E /* TinyHLSUITests.swift */; };
 		301638972CB19816006A6A2E /* TinyHLSUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 301638962CB19816006A6A2E /* TinyHLSUITestsLaunchTests.swift */; };
-		301638AA2CB19D22006A6A2E /* HLSNetworkHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 301638A92CB19D22006A6A2E /* HLSNetworkHandler.swift */; };
-		301638AD2CB19D9C006A6A2E /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 301638AC2CB19D9C006A6A2E /* Constants.swift */; };
-		301638B02CB1A108006A6A2E /* HLSParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 301638AF2CB1A108006A6A2E /* HLSParser.swift */; };
+		30C1A06B2CB2E9D600C72BAF /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C1A06A2CB2E9D600C72BAF /* Utils.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,19 +38,21 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		301638752CB19814006A6A2E /* TinyHLS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TinyHLS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		301638782CB19814006A6A2E /* Application.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Application.swift; sourceTree = "<group>"; };
 		3016387C2CB19816006A6A2E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		3016387E2CB19816006A6A2E /* TinyHLS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TinyHLS.entitlements; sourceTree = "<group>"; };
-		301638802CB19816006A6A2E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		301638862CB19816006A6A2E /* TinyHLSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TinyHLSTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		3016388A2CB19816006A6A2E /* TinyHLSTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TinyHLSTests.swift; sourceTree = "<group>"; };
-		301638902CB19816006A6A2E /* TinyHLSUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TinyHLSUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		301638942CB19816006A6A2E /* TinyHLSUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TinyHLSUITests.swift; sourceTree = "<group>"; };
-		301638962CB19816006A6A2E /* TinyHLSUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TinyHLSUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		301638A92CB19D22006A6A2E /* HLSNetworkHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HLSNetworkHandler.swift; sourceTree = "<group>"; };
 		301638AC2CB19D9C006A6A2E /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		30C1A06C2CB2EC8100C72BAF /* HLSBufferManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HLSBufferManager.swift; sourceTree = "<group>"; };
+		301638A92CB19D22006A6A2E /* HLSNetworkHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HLSNetworkHandler.swift; sourceTree = "<group>"; };
 		301638AF2CB1A108006A6A2E /* HLSParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HLSParser.swift; sourceTree = "<group>"; };
+		301638802CB19816006A6A2E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		301638752CB19814006A6A2E /* TinyHLS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TinyHLS.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3016387E2CB19816006A6A2E /* TinyHLS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TinyHLS.entitlements; sourceTree = "<group>"; };
+		3016388A2CB19816006A6A2E /* TinyHLSTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TinyHLSTests.swift; sourceTree = "<group>"; };
+		301638862CB19816006A6A2E /* TinyHLSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TinyHLSTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		301638942CB19816006A6A2E /* TinyHLSUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TinyHLSUITests.swift; sourceTree = "<group>"; };
+		301638902CB19816006A6A2E /* TinyHLSUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TinyHLSUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		301638962CB19816006A6A2E /* TinyHLSUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TinyHLSUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		30C1A06A2CB2E9D600C72BAF /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -133,12 +137,13 @@
 		301638A32CB19854006A6A2E /* Source */ = {
 			isa = PBXGroup;
 			children = (
-				301638AE2CB1A100006A6A2E /* Parser */,
-				301638AB2CB19D94006A6A2E /* Constants */,
 				301638A72CB1994A006A6A2E /* Bitrate */,
 				301638A62CB19941006A6A2E /* Buffer */,
+				301638AB2CB19D94006A6A2E /* Constants */,
 				301638A52CB19937006A6A2E /* Networking */,
+				301638AE2CB1A100006A6A2E /* Parser */,
 				301638A82CB199A8006A6A2E /* UI */,
+				30C1A0692CB2E9CE00C72BAF /* Utils */,
 			);
 			path = Source;
 			sourceTree = "<group>";
@@ -164,6 +169,7 @@
 		301638A62CB19941006A6A2E /* Buffer */ = {
 			isa = PBXGroup;
 			children = (
+				30C1A06C2CB2EC8100C72BAF /* HLSBufferManager.swift */,
 			);
 			path = Buffer;
 			sourceTree = "<group>";
@@ -197,6 +203,14 @@
 				301638AF2CB1A108006A6A2E /* HLSParser.swift */,
 			);
 			path = Parser;
+			sourceTree = "<group>";
+		};
+		30C1A0692CB2E9CE00C72BAF /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				30C1A06A2CB2E9D600C72BAF /* Utils.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -330,9 +344,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				301638792CB19814006A6A2E /* Application.swift in Sources */,
+				301638AD2CB19D9C006A6A2E /* Constants.swift in Sources */,
+				30C1A06D2CB2EC8100C72BAF /* HLSBufferManager.swift in Sources */,
 				301638AA2CB19D22006A6A2E /* HLSNetworkHandler.swift in Sources */,
 				301638B02CB1A108006A6A2E /* HLSParser.swift in Sources */,
-				301638AD2CB19D9C006A6A2E /* Constants.swift in Sources */,
+				30C1A06B2CB2E9D600C72BAF /* Utils.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
